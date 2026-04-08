@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+
+# PDF outputs (optional, but usually good to ignore generated files)
+# papel_timbrado_altima.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
