@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
+    html,body{overflow-x:hidden}
     html{scroll-behavior:smooth}
     :root{
       --gold:#D4AF37;--gold-light:#E8D48B;--gold-dark:#B8960C;
@@ -176,10 +177,10 @@
       .capa-logo{max-width:260px}
       .capa h1{font-size:1rem;letter-spacing:3px}
       .capa small{font-size:0.75rem}
-      .secao{padding:60px 5%;min-height:auto}
-      .secao h2{font-size:2.2rem;margin-bottom:12px}
-      .secao .subtitulo{font-size:1rem;margin-bottom:35px}
-      .conceito-texto{font-size:1rem;line-height:1.8}
+      .secao{padding:60px 8%;min-height:auto;text-align:center}
+      .secao h2{font-size:2.2rem;margin-bottom:12px;text-align:center}
+      .secao .subtitulo{font-size:1rem;margin-bottom:35px;margin-left:auto;margin-right:auto;text-align:center}
+      .conceito-texto,.historia-texto,.icon-text{font-size:1rem;line-height:1.8;margin-left:auto;margin-right:auto;text-align:center}
       .cores-grid,.logo-grid,.app-grid{grid-template-columns:1fr;gap:20px}
       .galeria-grid{grid-template-columns:1fr;gap:20px}
       .galeria-item{min-height:280px}
@@ -191,7 +192,6 @@
       .historia-destaque blockquote{font-size:1.4rem}
       .logo-card{padding:35px 25px}
       .galeria-item{aspect-ratio:16/10}
-      .app-grid{grid-template-columns:repeat(2,1fr)}
     }
     @media(max-width:480px){
       .app-grid{grid-template-columns:1fr}
