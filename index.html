@@ -145,9 +145,10 @@
     .lightbox.active{display:flex}
     .lightbox-content{position:relative;max-width:90%;max-height:90%}
     .lightbox-content img{max-width:100%;max-height:90vh;object-fit:contain;border-radius:12px}
-    .lightbox-close{position:absolute;top:-55px;right:0;color:white;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold-dark));width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:var(--transition);z-index:1001;border:none}
+    .lightbox-header{position:absolute;top:-60px;right:0;display:flex;align-items:center;gap:12px;z-index:1001}
+    .lightbox-close{color:white;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold-dark));width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:var(--transition);border:none;padding:0}
     .lightbox-close:hover{transform:scale(1.1)}
-    .lightbox-download{position:absolute;top:-55px;right:50px;color:white;font-size:0.9rem;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold-dark));padding:0 20px;height:40px;border-radius:10px;display:flex;align-items:center;gap:8px;transition:var(--transition);text-decoration:none;z-index:1001;white-space:nowrap;min-width:fit-content}
+    .lightbox-download{color:white;font-size:0.9rem;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold-dark));padding:0 22px;height:42px;border-radius:12px;display:flex;align-items:center;gap:8px;transition:var(--transition);text-decoration:none;white-space:nowrap;min-width:fit-content;font-weight:500}
     .lightbox-download:hover{transform:translateY(-2px)}
     .lightbox-download .download-icon{width:16px;height:16px}
 
@@ -530,19 +531,21 @@
   <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
     <div class="lightbox-content">
-      <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Fechar">
-        <svg viewBox="0 0 24 24" width="22" height="22" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-      <a id="lightbox-download" href="" download="" class="lightbox-download" onclick="event.stopPropagation();">
-        <svg class="download-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 15.577l-3.539-3.538 1.414-1.415L11 12.75V3h2v9.75l1.125-1.125 1.414 1.414L12 15.577z" fill="white"/>
-          <path d="M3 19v-2h18v2H3z" fill="white"/>
-        </svg>
-        Baixar Imagem
-      </a>
+      <div class="lightbox-header">
+        <a id="lightbox-download" href="" download="" class="lightbox-download" onclick="event.stopPropagation();">
+          <svg class="download-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15.577l-3.539-3.538 1.414-1.415L11 12.75V3h2v9.75l1.125-1.125 1.414 1.414L12 15.577z" fill="white"/>
+            <path d="M19 18H5v2h14v-2z" fill="white"/>
+          </svg>
+          Baixar Imagem
+        </a>
+        <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Fechar">
+          <svg viewBox="0 0 24 24" width="22" height="22" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
       <img id="lightbox-img" src="" alt="" />
     </div>
   </div>
