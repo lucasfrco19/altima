@@ -25,23 +25,24 @@ def process_logos():
     white_img.save('logo-branca.png')
     print("Saved logo-branca.png")
 
-    # Generate Monochromatic Logo (Grayscale)
-    # Most common interpretation for branding: solid black if on light background, 
-    # but grayscale (desaturated) is also common. 
-    # Let's do a grayscale desaturation first.
-    mono_img = Image.new("RGBA", img.size)
+    # Generate Silver Logo (Prata)
+    silver_img = Image.new("RGBA", img.size)
+    silver_pixels = silver_img.load()
     for y in range(img.size[1]):
         for x in range(img.size[0]):
             r, g, b, a = pixels[x, y]
             if a > 0:
-                # Basic grayscale formula
+                # Formula for a premium silver/platinum look
+                # We want it bright but with depth
                 v = int(0.299 * r + 0.587 * g + 0.114 * b)
-                new_pixels[x, y] = (v, v, v, a)
+                # Boost brightness for silver feel
+                v = min(255, int(v * 1.5) + 100) 
+                silver_pixels[x, y] = (v, v, v, a)
             else:
-                new_pixels[x, y] = (0, 0, 0, 0)
+                silver_pixels[x, y] = (0, 0, 0, 0)
     
-    mono_img.save('logo-monocromatica.png')
-    print("Saved logo-monocromatica.png")
+    silver_img.save('logo-prata.png')
+    print("Saved logo-prata.png")
 
 if __name__ == "__main__":
     process_logos()
