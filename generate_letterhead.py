@@ -25,8 +25,8 @@ class AltimaLetterhead(FPDF):
         self.set_font("helvetica", "I", 8)
         self.set_text_color(60, 63, 65) # Graphite
         self.cell(0, 4, "ALTIMA Clínica Integrada | Excelência em Saúde e Bem-estar", 0, new_x=XPos.LMARGIN, new_y=YPos.NEXT, align="C")
-        self.cell(0, 4, "Rua do Cuidado, 123 - Centro Médico - São Paulo/SP", 0, new_x=XPos.LMARGIN, new_y=YPos.NEXT, align="C")
-        self.cell(0, 4, "Contato: (11) 99999-8888 | www.altimaclinica.com.br", 0, new_x=XPos.LMARGIN, new_y=YPos.NEXT, align="C")
+        self.cell(0, 4, "Rua da Conceicao, 95 - Centro, Niteroi - RJ, 24.020-085", 0, new_x=XPos.LMARGIN, new_y=YPos.NEXT, align="C")
+        self.cell(0, 4, "Contato: 21 - 969274080 | www.altimaclinica.com.br", 0, new_x=XPos.LMARGIN, new_y=YPos.NEXT, align="C")
 
 def create_pdf():
     pdf = AltimaLetterhead()
