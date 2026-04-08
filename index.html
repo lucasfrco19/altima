@@ -145,9 +145,9 @@
     .lightbox.active{display:flex}
     .lightbox-content{position:relative;max-width:90%;max-height:90%}
     .lightbox-content img{max-width:100%;max-height:90vh;object-fit:contain;border-radius:12px}
-    .lightbox-close{position:absolute;top:-45px;right:0;color:white;font-size:1.8rem;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold-dark));width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:var(--transition)}
+    .lightbox-close{position:absolute;top:-50px;right:0;color:white;font-size:1.8rem;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold-dark));width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:var(--transition);z-index:1001}
     .lightbox-close:hover{transform:scale(1.1)}
-    .lightbox-download{position:absolute;top:-45px;right:55px;color:white;font-size:0.9rem;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold-dark));padding:10px 20px;border-radius:8px;display:flex;align-items:center;gap:8px;transition:var(--transition);text-decoration:none}
+    .lightbox-download{position:absolute;top:-50px;right:50px;color:white;font-size:0.9rem;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold-dark));padding:0 20px;height:40px;border-radius:10px;display:flex;align-items:center;gap:8px;transition:var(--transition);text-decoration:none;z-index:1001}
     .lightbox-download:hover{transform:translateY(-2px)}
     .lightbox-download .download-icon{width:16px;height:16px}
 
@@ -183,7 +183,7 @@
       .conceito-texto,.historia-texto,.icon-text{font-size:1rem;line-height:1.8;margin-left:auto;margin-right:auto;text-align:center}
       .cores-grid,.logo-grid,.app-grid{grid-template-columns:1fr;gap:20px}
       .galeria-grid{grid-template-columns:1fr;gap:20px}
-      .galeria-item{min-height:280px}
+      .galeria-item{min-height:auto;aspect-ratio:3.5/4}
       .valores-grid{grid-template-columns:1fr}
       .tipo-exemplo{padding:25px}
       .display-serif{font-size:2.2rem}
@@ -191,7 +191,6 @@
       .historia-destaque{padding:30px 25px}
       .historia-destaque blockquote{font-size:1.4rem}
       .logo-card{padding:35px 25px}
-      .galeria-item{aspect-ratio:16/10}
     }
     @media(max-width:480px){
       .app-grid{grid-template-columns:1fr}
