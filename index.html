@@ -143,9 +143,9 @@
     /* ========== LIGHTBOX ========== */
     .lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(30,30,30,0.95);z-index:1000;justify-content:center;align-items:center;padding:20px;backdrop-filter:blur(10px)}
     .lightbox.active{display:flex}
-    .lightbox-content{position:relative;max-width:90%;max-height:90%}
-    .lightbox-content img{max-width:100%;max-height:90vh;object-fit:contain;border-radius:12px}
-    .lightbox-header{position:absolute;top:30px;right:30px;display:flex;align-items:center;gap:15px;z-index:1001}
+    .lightbox-content{position:relative;max-width:90%;max-height:90%;display:inline-flex;align-items:center;justify-content:center}
+    .lightbox-content img{max-width:100%;max-height:90vh;object-fit:contain;border-radius:12px;display:block}
+    .lightbox-header{position:absolute;top:20px;right:20px;display:flex;align-items:center;gap:15px;z-index:1001}
     .lightbox-close{color:white;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold-dark));width:45px;height:45px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:var(--transition);border:none;padding:0;box-shadow:0 4px 20px rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.1)}
     .lightbox-close:hover{transform:scale(1.1);background:linear-gradient(135deg,var(--gold-light),var(--gold))}
     .lightbox-download{color:white;font-size:0.95rem;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold-dark));padding:0 25px;height:45px;border-radius:12px;display:flex;align-items:center;gap:10px;transition:var(--transition);text-decoration:none;white-space:nowrap;min-width:fit-content;font-weight:600;box-shadow:0 4px 20px rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.1)}
@@ -192,7 +192,7 @@
       .historia-destaque{padding:30px 25px}
       .historia-destaque blockquote{font-size:1.4rem}
       .logo-card{padding:35px 25px}
-      .lightbox-header{top:20px;right:20px;gap:10px}
+      .lightbox-header{position:fixed;top:20px;right:20px;gap:10px}
       .lightbox-download{padding:0 15px;font-size:0.8rem;height:38px;border-radius:10px}
       .lightbox-download .download-icon{width:14px;height:14px}
       .lightbox-close{width:38px;height:38px}
@@ -534,22 +534,22 @@
 
   <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-    <div class="lightbox-header">
-      <a id="lightbox-download" href="" download="" class="lightbox-download" onclick="event.stopPropagation();">
-        <svg class="download-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 15.577l-3.539-3.538 1.414-1.415L11 12.75V3h2v9.75l1.125-1.125 1.414 1.414L12 15.577z" fill="white"/>
-          <path d="M19 18H5v2h14v-2z" fill="white"/>
-        </svg>
-        Baixar Imagem
-      </a>
-      <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Fechar">
-        <svg viewBox="0 0 24 24" width="22" height="22" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-    </div>
     <div class="lightbox-content">
+      <div class="lightbox-header">
+        <a id="lightbox-download" href="" download="" class="lightbox-download" onclick="event.stopPropagation();">
+          <svg class="download-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15.577l-3.539-3.538 1.414-1.415L11 12.75V3h2v9.75l1.125-1.125 1.414 1.414L12 15.577z" fill="white"/>
+            <path d="M19 18H5v2h14v-2z" fill="white"/>
+          </svg>
+          Baixar Imagem
+        </a>
+        <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Fechar">
+          <svg viewBox="0 0 24 24" width="22" height="22" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
       <img id="lightbox-img" src="" alt="" />
     </div>
   </div>
