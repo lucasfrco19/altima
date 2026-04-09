@@ -85,7 +85,7 @@
     .icon-display img{max-width:850px;width:100%;height:auto}
     .icon-text{max-width:700px;font-size:1.1rem;line-height:1.9;color:var(--graphite-light);margin-bottom:30px}
     .icon-download-container{text-align:center;margin-top:10px}
-    .icon-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:35px;margin-top:40px}
+    .icon-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(480px,1fr));gap:35px;margin-top:40px}
     .icon-card{text-align:center}
     .icon-card h4{font-size:1.3rem;margin-top:15px;margin-bottom:6px;color:var(--graphite);font-weight:700}
     .icon-card p{color:var(--graphite-light);font-size:0.9rem;margin-bottom:15px}
@@ -97,7 +97,7 @@
     .download-icon{width:18px;height:18px;fill:white;display:inline-block;vertical-align:middle}
 
     /* ========== LOGOTIPO ========== */
-    .logo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:35px;margin-top:10px}
+    .logo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(480px,1fr));gap:35px;margin-top:10px}
     .logo-card{background:var(--cream);padding:50px 40px;border-radius:var(--radius);text-align:center;transition:var(--transition);box-shadow:var(--shadow)}
     .logo-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover)}
     .logo-card.dark{background:var(--dark)}
@@ -181,7 +181,7 @@
 
     /* ========== RESPONSIVO ========== */
     @media(max-width:768px){
-      .capa-logo{max-width:480px}
+      .capa-logo{max-width:550px;width:95%}
       .capa h1{font-size:1.1rem;letter-spacing:3px}
       .capa small{font-size:0.75rem}
       .secao{padding:60px 6%;min-height:auto}
@@ -192,7 +192,7 @@
       .galeria-grid{grid-template-columns:1fr;gap:20px}
       .galeria-item{min-height:180px;aspect-ratio:16/9}
       .galeria-item .download-overlay{top:12px;bottom:auto;right:12px;opacity:1}
-      .galeria-caption{padding:12px;background:linear-gradient(to top,rgba(30,30,30,0.9),transparent)}
+      .galeria-caption{padding:12px;background:linear-gradient(to top,rgba(30,30,30,0.9),transparent);transform:translateY(0)}
       .galeria-caption h4{font-size:0.9rem}
       .galeria-caption p{font-size:0.7rem}
       .valores-grid{grid-template-columns:1fr}
@@ -486,7 +486,7 @@
           <svg class="download-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.577l-3.539-3.538 1.414-1.415L11 12.75V3h2v9.75l1.125-1.125 1.414 1.414L12 15.577z" fill="white"/><path d="M3 19v-2h18v2H3z" fill="white"/></svg>
           Baixar
         </a>
-        <div class="galeria-caption"><h4>Tablet / Digital</h4><p>Apresentação digital em dispositivo móvel</p></div>
+        <div class="galeria-caption fade-in"><h4>Tablet / Digital</h4><p>Apresentação digital em dispositivo móvel</p></div>
       </div>
       <div class="galeria-item" onclick="openLightbox('mockup-placa-fosca.png','Placa de Vidro Fosco')">
         <img src="mockup-placa-fosca.png" alt="Placa de Vidro Fosco" />
@@ -494,7 +494,7 @@
           <svg class="download-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.577l-3.539-3.538 1.414-1.415L11 12.75V3h2v9.75l1.125-1.125 1.414 1.414L12 15.577z" fill="white"/><path d="M3 19v-2h18v2H3z" fill="white"/></svg>
           Baixar
         </a>
-        <div class="galeria-caption"><h4>Placa de Vidro Fosco</h4><p>Sinalização em ambiente clínico</p></div>
+        <div class="galeria-caption fade-in"><h4>Placa de Vidro Fosco</h4><p>Sinalização em ambiente clínico</p></div>
       </div>
       <div class="galeria-item" onclick="openLightbox('mockup-variacao.png','Cartões de Visita')">
         <img src="mockup-variacao.png" alt="Cartões de Visita" />
@@ -502,7 +502,7 @@
           <svg class="download-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.577l-3.539-3.538 1.414-1.415L11 12.75V3h2v9.75l1.125-1.125 1.414 1.414L12 15.577z" fill="white"/><path d="M3 19v-2h18v2H3z" fill="white"/></svg>
           Baixar
         </a>
-        <div class="galeria-caption"><h4>Cartões de Visita</h4><p>Material gráfico premium com hot stamping dourado</p></div>
+        <div class="galeria-caption fade-in"><h4>Cartões de Visita</h4><p>Material gráfico premium com hot stamping dourado</p></div>
       </div>
       <div class="galeria-item" onclick="openLightbox('mockup-balcão.png','Balcão / Recepção')">
         <img src="mockup-balcão.png" alt="Balcão / Recepção" />
@@ -510,7 +510,7 @@
           <svg class="download-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.577l-3.539-3.538 1.414-1.415L11 12.75V3h2v9.75l1.125-1.125 1.414 1.414L12 15.577z" fill="white"/><path d="M3 19v-2h18v2H3z" fill="white"/></svg>
           Baixar
         </a>
-        <div class="galeria-caption"><h4>Balcão / Recepção</h4><p>Branding aplicado no balcão da clínica</p></div>
+        <div class="galeria-caption fade-in"><h4>Balcão / Recepção</h4><p>Branding aplicado no balcão da clínica</p></div>
       </div>
       <div class="galeria-item" onclick="openLightbox('mockup-tv.png','TV / Display Clínico')">
         <img src="mockup-tv.png" alt="TV / Display Clínico" />
@@ -518,7 +518,7 @@
           <svg class="download-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.577l-3.539-3.538 1.414-1.415L11 12.75V3h2v9.75l1.125-1.125 1.414 1.414L12 15.577z" fill="white"/><path d="M3 19v-2h18v2H3z" fill="white"/></svg>
           Baixar
         </a>
-        <div class="galeria-caption"><h4>TV / Display Clínico</h4><p>Display em ambiente de atendimento</p></div>
+        <div class="galeria-caption fade-in"><h4>TV / Display Clínico</h4><p>Display em ambiente de atendimento</p></div>
       </div>
       <div class="galeria-item" onclick="openLightbox('mockup-copo.png','Copo e Cartões')">
         <img src="mockup-copo.png" alt="Copo e Cartões" />
@@ -526,7 +526,7 @@
           <svg class="download-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.577l-3.539-3.538 1.414-1.415L11 12.75V3h2v9.75l1.125-1.125 1.414 1.414L12 15.577z" fill="white"/><path d="M3 19v-2h18v2H3z" fill="white"/></svg>
           Baixar
         </a>
-        <div class="galeria-caption"><h4>Copo e Cartões</h4><p>Materiais promocionais da marca</p></div>
+        <div class="galeria-caption fade-in"><h4>Copo e Cartões</h4><p>Materiais promocionais da marca</p></div>
       </div>
       <div class="galeria-item" onclick="openLightbox('mockup-janela.png','Janela / Fachada')">
         <img src="mockup-janela.png" alt="Janela / Fachada" />
@@ -534,7 +534,7 @@
           <svg class="download-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.577l-3.539-3.538 1.414-1.415L11 12.75V3h2v9.75l1.125-1.125 1.414 1.414L12 15.577z" fill="white"/><path d="M3 19v-2h18v2H3z" fill="white"/></svg>
           Baixar
         </a>
-        <div class="galeria-caption"><h4>Janela / Fachada</h4><p>Marca aplicada em vidro e fachada</p></div>
+        <div class="galeria-caption fade-in"><h4>Janela / Fachada</h4><p>Marca aplicada em vidro e fachada</p></div>
       </div>
       <div class="galeria-item" onclick="openLightbox('mockup-cadeira.png','Cadeira de Escritório')">
         <img src="mockup-cadeira.png" alt="Cadeira de Escritório" />
@@ -542,7 +542,7 @@
           <svg class="download-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.577l-3.539-3.538 1.414-1.415L11 12.75V3h2v9.75l1.125-1.125 1.414 1.414L12 15.577z" fill="white"/><path d="M3 19v-2h18v2H3z" fill="white"/></svg>
           Baixar
         </a>
-        <div class="galeria-caption"><h4>Cadeira de Escritório</h4><p>Branding em mobiliário clínico</p></div>
+        <div class="galeria-caption fade-in"><h4>Cadeira de Escritório</h4><p>Branding em mobiliário clínico</p></div>
       </div>
       <div class="galeria-item" onclick="openLightbox('mockup-placa-vidro.png','Placa de Vidro')">
         <img src="mockup-placa-vidro.png" alt="Placa de Vidro" />
@@ -550,7 +550,7 @@
           <svg class="download-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.577l-3.539-3.538 1.414-1.415L11 12.75V3h2v9.75l1.125-1.125 1.414 1.414L12 15.577z" fill="white"/><path d="M3 19v-2h18v2H3z" fill="white"/></svg>
           Baixar
         </a>
-        <div class="galeria-caption"><h4>Placa de Vidro</h4><p>Sinalização premium em vidro</p></div>
+        <div class="galeria-caption fade-in"><h4>Placa de Vidro</h4><p>Sinalização premium em vidro</p></div>
       </div>
     </div>
   </section>
