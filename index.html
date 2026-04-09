@@ -151,11 +151,11 @@
     .lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(30,30,30,0.95);z-index:1000;justify-content:center;align-items:center;padding:20px;backdrop-filter:blur(10px)}
     .lightbox.active{display:flex}
     .lightbox-content{position:relative;max-width:90%;max-height:90%}
-    .lightbox-content img{max-width:100%;max-height:90vh;object-fit:contain;border-radius:12px}
-    .lightbox-close{position:absolute;top:-45px;right:0;color:white;font-size:1.8rem;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold-dark));width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:var(--transition)}
-    .lightbox-close:hover{transform:scale(1.1)}
-    .lightbox-download{position:absolute;top:-45px;right:55px;color:white;font-size:0.9rem;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold-dark));padding:10px 20px;border-radius:8px;display:flex;align-items:center;gap:8px;transition:var(--transition);text-decoration:none}
-    .lightbox-download:hover{transform:translateY(-2px)}
+    .lightbox-content img{max-width:100%;max-height:80vh;object-fit:contain;border-radius:12px;margin-top:60px;display:block}
+    .lightbox-close{position:absolute;top:0;right:0;color:white;font-size:1.8rem;cursor:pointer;background:linear-gradient(135deg,#ff4b2b,#ff416c);width:45px;height:45px;border-radius:10px;display:flex;align-items:center;justify-content:center;transition:var(--transition);z-index:1010;margin-top:5px;box-shadow:0 4px 15px rgba(255,75,43,0.3)}
+    .lightbox-close:hover{transform:scale(1.05);filter:brightness(1.1)}
+    .lightbox-download{position:absolute;top:0;right:55px;color:white;font-size:0.9rem;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold-dark));padding:0 20px;height:45px;border-radius:10px;display:flex;align-items:center;gap:8px;transition:var(--transition);text-decoration:none;z-index:1010;margin-top:5px;font-weight:600;box-shadow:0 4px 15px rgba(212,175,55,0.3)}
+    .lightbox-download:hover{transform:translateY(-2px);filter:brightness(1.1)}
     .lightbox-download .download-icon{width:16px;height:16px}
 
     /* ========== SEÇÃO BÔNUS ========== */
@@ -181,7 +181,7 @@
 
     /* ========== RESPONSIVO ========== */
     @media(max-width:768px){
-      .capa-logo{max-width:none;width:95%}
+      .capa-logo{max-width:none;width:150%;transform:scale(1.1);margin-bottom:60px}
       .capa h1{font-size:1.1rem;letter-spacing:3px}
       .capa small{font-size:0.75rem}
       .secao{padding:60px 6%;min-height:auto}
